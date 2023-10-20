@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url('../font/Poppins-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin: 0;
+    background-image: url(../img/kudamono-haikei2.jpg);
+    background-size: 1500px;
+    background-repeat: no-repeat;
+    background-position: -150px -200px;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0%; /* 要素の上端を親要素の中央に配置 */
+    left: 100%; /* 要素の左端を親要素の中央に配置 */
+    transform: translate(-50%, -50%); /* 中央寄せに調整 */
+    width: 1000px;
+    height: 700px;
+    background-color: #ffa042;
+    border-radius: 50%;
+}
+.waku{
+    width:100%;
+    height:20px;
+    background-color: #ffa042;
+}
+.header {
+    font-family: 'Poppins-Light', sans-serif;
+    color: #007fff;
+    font-size: 120px;
+    position: absolute;
+    top: 0; /* 上端に配置 */
+    right: 100px;
+    display: flex;
+    align-items: center; /* テキストと線を縦方向に中央寄せ */
+    line-height: 0.8;
+    margin-top: 130px;
+    margin-bottom: -200px;
+}
+
+.header::before {
+    background-color: #007fff;
+    content: "";
+    height: 5px;
+    width: 600px;
+    margin-right: 15px;
+}
+
+@media (max-width: 768px) { /* 画面幅が768px以下のときのスタイル */
+    .header {
+        font-size: 90px; /* 小さいサイズに変更 */
+        line-height:0.8; /* 行間を狭める */
+        right: -50px;
+        margin-top: 100px;
+        margin-bottom: -200px;
+    }
+}
+.continer {
+    margin-top: 300px;
+    width: 100%;
+    display: flex;           /* Flexboxを有効にする */
+    flex-wrap: wrap;        /* アイテムがコンテナの幅を超えたら折り返す */
+    align-content:space-between;
+    justify-content: space-evenly;
+}
+
+
+.item .fruit-image{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.item {
+    background-color: #fff9;
+    background-position: center; /* 画像を中央に配置 */
+    width:400px;
+    border-radius: 10px; 
+    margin-bottom: 20px; /* 商品間の余白を追加 */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.item {
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 10px; /* 商品名の上部の余白を追加 */
+}
+
+.item .con2 {
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 5px; /* 価格の上部の余白を追加 */
+}
+
+.item .price1{
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 5px; /* 価格の上部の余白を追加 */
+}
+
+@media (max-width: 768px) { 
+    .continer .item {
+        flex: 1 1 calc(100% - 10px);  /* スクリーン幅が768px以下の場合、アイテムを100%の幅に変更 */
+        max-width: calc(100% - 10px); 
+    }
+}
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* 要素を縦方向に並べる */
+}
+.totals{
+    width: 600px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 20px; /* 価格の上部の余白を追加 */
+    margin-bottom: 20px; /* 商品間の余白を追加 */
+    background-color: #fff9;
+    border-radius: 10px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.buttons-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px; /* ボタン間のスペース */
+}
+
+
+.button {
+    padding: 5px 15px;
+    background-color: #f2f2f2; /* ライトグレーの背景 */
+    border: none;
+    border-radius: 5px; /* 丸みを帯びたボタン */
+    text-decoration: none; /* リンクの下線を削除 */
+    color: #333; /* ダークグレーの文字色 */
+    font-weight: bold; /* 文字を太字に */
+    transition: background-color 0.3s; /* ホバーエフェクトのアニメーション */
+}
+
+.button:hover {
+    background-color: #ddd; /* ホバー時の背景色 */
+}

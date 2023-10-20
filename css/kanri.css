@@ -1,0 +1,52 @@
+.header {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.nyuryoku {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 80%;
+    margin-top: 40px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+.button{
+    width: 100px;
+    margin-top:20px;
+    text-align: center;
+}
