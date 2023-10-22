@@ -112,12 +112,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="email" class="email" name="email" placeholder="usagisan@pyonpyon.com" required>
       </div>
 
-
-      <!-- <div class="post main1" action="">
-      <label for="input_color">認証コード</label><br>
-      <input type="password" class="input_pass" name="input_pass" value="" required placeholder="半角英数字8~10文字" maxlength="10" >
-    </div> -->
-
       <div class="main6">
         <div class="radio-group">
           <input type="radio" name="option" value="チラシ" class="mark">

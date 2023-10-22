@@ -62,7 +62,6 @@ $(document).ready(function(){
 <?php
 echo '<form action="process_order.php" method="post">';
 echo '<div class="continer">';
-
 foreach($products as $row) {
     echo '<div class="item" data-product-id="' . $row["id"] . '">';
     echo '<img src="img/' . $row["image"] . '" class="fruit-image">';
