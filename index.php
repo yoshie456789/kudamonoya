@@ -26,11 +26,34 @@ try {
     <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/index.js"></script>
+	<script>
+$(document).ready(function(){
+    $(".btn-gNav").on("click", function(){
+        $(this).toggleClass("open");
+        $(".gNav").toggleClass("open");
+    });
+});
+</script>
 </head>
 <body>
 <div class="buttons-container">
     <a href="edit_profile.php" class="button">プロフィール編集</a>
     <a href="logout.php" class="button">ログアウト</a>
+</div>
+
+<div class="hamburger">
+        <div class="logo"></div>
+        <p class="btn-gNav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </p>
+        <nav class="gNav">
+            <ul class="gNav-menu">
+                <li><a href="edit_profile.php" class="button">プロフィール編集</a></li>
+                <li><a href="logout.php" class="button">ログアウト</a></li>
+            </ul>
+        </nav>
 </div>
     <div class="waku"></div>
     <div class="header">
@@ -62,6 +85,6 @@ echo '<div class="center-wrapper">';
 echo '</div>';
 echo '</form>';
 ?>
-    </div>
+
 </body>
 </html>

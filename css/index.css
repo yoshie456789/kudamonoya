@@ -49,15 +49,6 @@ body::before {
     margin-right: 15px;
 }
 
-@media (max-width: 768px) { /* 画面幅が768px以下のときのスタイル */
-    .header {
-        font-size: 90px; /* 小さいサイズに変更 */
-        line-height:0.8; /* 行間を狭める */
-        right: -50px;
-        margin-top: 100px;
-        margin-bottom: -200px;
-    }
-}
 .continer {
     margin-top: 300px;
     width: 100%;
@@ -104,17 +95,6 @@ body::before {
     margin-top: 5px; /* 価格の上部の余白を追加 */
 }
 
-@media (max-width: 768px) { 
-    .continer .item {
-        flex: 1 1 calc(100% - 10px);  /* スクリーン幅が768px以下の場合、アイテムを100%の幅に変更 */
-        max-width: calc(100% - 10px); 
-    }
-}
-.center-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;  /* 要素を縦方向に並べる */
-}
 .totals{
     width: 600px;
     font-weight: bold;
@@ -125,6 +105,11 @@ body::before {
     background-color: #fff9;
     border-radius: 10px; 
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* 要素を縦方向に並べる */
 }
 
 .buttons-container {
@@ -149,4 +134,390 @@ body::before {
 
 .button:hover {
     background-color: #ddd; /* ホバー時の背景色 */
+}
+
+.hamburger {
+    display: none;
+}
+@media (max-width: 1024px) { 
+body {
+    background-size: 1043px;
+    background-position: -141px -141px;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    transform: translate(-50%, -70%);
+    width: 500px;
+    height: 500px;
+    background-color: #ffa042;
+    border-radius: 50%;
+}    
+.header {
+    font-family: 'Poppins-Light', sans-serif;
+    color: #007fff;
+    right: -100px;
+    display: flex;
+    margin-top: 80px;
+
+}
+.item {
+    background-color: #fff9;
+    background-position: center; /* 画像を中央に配置 */
+    width:400px;
+    border-radius: 10px; 
+    margin-bottom: 20px; /* 商品間の余白を追加 */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.item {
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 10px; /* 商品名の上部の余白を追加 */
+}
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* 要素を縦方向に並べる */
+}
+}
+
+@media (max-width: 801px) { 
+body {
+    background-size: 1221px;
+    background-position: -97px -112px;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    transform: translate(-50%, -70%);
+    width: 500px;
+    height: 500px;
+    background-color: #ffa042;
+    border-radius: 50%;
+}    
+
+.header {
+    font-family: 'Poppins-Light', sans-serif;
+    color: #007fff;
+    right: -100px;
+    display: flex;
+    margin-top: 80px;
+
+}
+.item {
+    background-color: #fff9;
+    background-position: center; /* 画像を中央に配置 */
+    width:400px;
+    border-radius: 10px; 
+    margin-bottom: 20px; /* 商品間の余白を追加 */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.item {
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 10px; /* 商品名の上部の余白を追加 */
+}
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* 要素を縦方向に並べる */
+}
+}
+
+@media (max-width: 782px) { 
+body {
+    background-size: 1087px;
+    background-position: -83px -84px;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    transform: translate(-50%, -70%);
+    width: 500px;
+    height: 500px;
+    background-color: #ffa042;
+    border-radius: 50%;
+}    
+
+.header {
+    font-family: 'Poppins-Light', sans-serif;
+    color: #007fff;
+    right: -110px;
+    display: flex;
+    margin-top: 80px;
+
+}
+.item {
+    background-color: #fff9;
+    background-position: center; /* 画像を中央に配置 */
+    width:400px;
+    border-radius: 10px; 
+    margin-bottom: 20px; /* 商品間の余白を追加 */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.item {
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 10px; /* 商品名の上部の余白を追加 */
+}
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* 要素を縦方向に並べる */
+}
+}
+
+@media (max-width: 480px) { 
+body {
+    background-size: 1500px;
+    background-position: -150px -200px;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    transform: translate(-50%, -70%);
+    width: 500px;
+    height: 500px;
+    background-color: #ffa042;
+    border-radius: 50%;
+}    
+
+.header {
+    font-family: 'Poppins-Light', sans-serif;
+    color: #007fff;
+    font-size: 80px;
+    position: absolute;
+    top: 0;
+    right: -80px;
+    display: flex;
+    margin-top: 80px;
+}
+.item {
+    background-color: #fff9;
+    background-position: center; /* 画像を中央に配置 */
+    width:400px;
+    border-radius: 10px; 
+    margin-bottom: 20px; /* 商品間の余白を追加 */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.item {
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 10px; /* 商品名の上部の余白を追加 */
+}
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* 要素を縦方向に並べる */
+}
+}
+
+@media (max-width: 390px) { 
+body {
+    background-size: 874px;
+    background-position: -182px -57px;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    transform: translate(-50%, -70%);
+    width: 500px;
+    height: 500px;
+    background-color: #ffa042;
+    border-radius: 50%;
+}    
+
+.header {
+    font-family: 'Poppins-Light', sans-serif;
+    color: #007fff;
+    font-size: 80px;
+    position: absolute;
+    top: 0;
+    right: -80px;
+    display: flex;
+    margin-top: 80px;
+}
+.item {
+    background-color: #fff9;
+    background-position: center; /* 画像を中央に配置 */
+    width:400px;
+    border-radius: 10px; 
+    margin-bottom: 20px; /* 商品間の余白を追加 */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.item {
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 10px; /* 商品名の上部の余白を追加 */
+}
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* 要素を縦方向に並べる */
+}
+}
+
+@media (max-width: 500px) {
+    .buttons-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px){
+.test { display: none; }
+.hamburger { display: none; }
+ol,
+ul {
+    list-style: none;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+}
+
+.hamburger {
+    margin: 20px auto 0;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.hamburger .btn-gNav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 24px;
+    z-index: 12;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.hamburger .btn-gNav span {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 10px;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.hamburger .btn-gNav span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger .btn-gNav span:nth-child(2) {
+    top: 10px;
+}
+
+.hamburger .btn-gNav span:nth-child(3) {
+    top: 20px;
+}
+
+.hamburger .btn-gNav.open span:nth-child(1) {
+    background: #ffffff;
+    top: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.hamburger .btn-gNav.open span:nth-child(2),
+.hamburger .btn-gNav.open span:nth-child(3) {
+    top: 6px;
+    background: #ffffff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+.btn-gNav {
+    display: none;
+}
+
+.gNav .gNav-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gNav .gNav-menu li {
+    margin: 0 auto;
+    padding: 0 5px;
+}
+	
+}
+
+@media screen and (max-width: 500px) {
+    .btn-gNav {
+        display: block;
+    }
+
+    .gNav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        font-size: 16px;
+        box-sizing: border-box;
+        z-index: 1;
+        padding-top: 50px;
+        transition: .3s;
+    }
+
+    .gNav.open {
+        right: 0;
+    }
+
+    .gNav .gNav-menu {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        flex-direction: column;
+        text-align: center;
+        /*justify-content: center;*/
+    }
+
+    .gNav .gNav-menu li {
+        width: 86%;
+        padding: 15px;
+        border-bottom: #525252 1px solid;
+    }
+}
+
+@media (min-width: 501px) {
+    .hamburger {
+        display: none;
+    }
 }

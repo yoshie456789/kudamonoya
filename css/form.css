@@ -1,29 +1,28 @@
 @charset "utf-8";
 
+
 body {
     margin: 0px;
     background-color: #ffcc99;
-}
-body{
     font-size: 18px;
     color: #f26118;
     font-weight: 700;
     font-family: 'Ubuntu', sans-serif;
 }
-
 .midashi{
    text-align: center;
 }
 h3{
     display: inline-block;
-    width: 600px;
 }
 
 .error-message {
     color: red;
   }
 
-
+.midashi2{
+   text-align: center;
+}
 .main{
   text-align: center;
   padding-top:50px;
@@ -35,7 +34,7 @@ input{
     border-radius: 10px;
     background-color: #fff;
     padding:12px;
-    width:100%;
+    width: 80%;
     height: 40px;
 }
 label {
@@ -62,11 +61,13 @@ input:focus {
     line-height: 200%;
 }
 
+/*
 .container{
 display:flex;
 justify-content: center;
 margin-bottom:50px;
   }
+*/
 
 .mark{
     width:18px;
@@ -79,6 +80,7 @@ margin-bottom:50px;
     justify-content:center;
     align-items: center;
     margin-top:20px;
+	margin-bottom:50px;
   }
   
   .main5:hover {
@@ -104,7 +106,7 @@ margin-bottom:50px;
     color: #ff6600;
     font-family: sans-serif;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
@@ -123,11 +125,10 @@ margin-bottom:50px;
 
 .buttons-container {
   position: absolute;
-  margin-top: 15px;
-  margin-right: -600px;
-  display: flex;
-  gap: 10px;
-  /* ボタン間のスペース */
+    margin-top: -980px;
+    display: flex;
+    gap: 10px;
+    margin-left: 70%;
 }
 
 .button {
@@ -150,4 +151,157 @@ margin-bottom:50px;
 .button:hover {
   background-color: #ddd;
   /* ホバー時の背景色 */
+}
+
+
+@media (max-width: 500px) {
+    .buttons-container {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 500px){
+.test { display: none; }
+.hamburger { display: none; }
+ol,
+ul {
+    list-style: none;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+}
+
+.hamburger {
+    margin: 20px auto 0;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.hamburger .btn-gNav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 24px;
+    z-index: 12;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.hamburger .btn-gNav span {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 10px;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.hamburger .btn-gNav span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger .btn-gNav span:nth-child(2) {
+    top: 10px;
+}
+
+.hamburger .btn-gNav span:nth-child(3) {
+    top: 20px;
+}
+
+.hamburger .btn-gNav.open span:nth-child(1) {
+    background: #ffffff;
+    top: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.hamburger .btn-gNav.open span:nth-child(2),
+.hamburger .btn-gNav.open span:nth-child(3) {
+    top: 6px;
+    background: #ffffff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+.btn-gNav {
+    display: none;
+}
+
+.gNav .gNav-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gNav .gNav-menu li {
+    margin: 0 auto;
+    padding: 0 5px;
+}
+	
+}
+
+@media screen and (max-width: 500px) {
+    .btn-gNav {
+        display: block;
+    }
+
+    .gNav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        font-size: 16px;
+        box-sizing: border-box;
+        z-index: 1;
+        padding-top: 50px;
+        transition: .3s;
+    }
+
+    .gNav.open {
+        right: 0;
+    }
+
+    .gNav .gNav-menu {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        flex-direction: column;
+        text-align: center;
+        /*justify-content: center;*/
+    }
+
+    .gNav .gNav-menu li {
+        width: 86%;
+        padding: 15px;
+        border-bottom: #525252 1px solid;
+    }
+}
+
+@media (min-width: 501px) {
+    .hamburger {
+        display: none;
+    }
 }
