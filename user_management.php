@@ -52,7 +52,6 @@ foreach ($results as $row) {
     // subtotalとsubtotal_taxedを累計
     $groupedData[$key]['Total Subtotal'] += (float) $row['Total Subtotal'];
 $groupedData[$key]['Total Subtotal Taxed'] += (float) $row['Total Subtotal Taxed'];
-
 }
 
 ?>

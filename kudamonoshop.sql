@@ -133,7 +133,6 @@ ALTER TABLE `purchases`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
-
 --
 -- ダンプしたテーブルの AUTO_INCREMENT
 --

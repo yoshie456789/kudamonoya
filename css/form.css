@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 body {
     margin: 0px;
     background-color: #ffcc99;
@@ -264,7 +263,6 @@ a {
     .btn-gNav {
         display: block;
     }
-
     .gNav {
         position: fixed;
         top: 0;

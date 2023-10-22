@@ -127,8 +127,7 @@ $(document).ready(function(){
         <div class="buttons-container">
         <a href="index.php" class="button">トップページ</a>
         <a href="logout.php" class="button">ログアウト</a>
-    </div>
-	
+    </div>	
 	<div class="hamburger">
         <div class="logo"></div>
         <p class="btn-gNav">
