@@ -56,14 +56,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/valitation-test.js"></script>
     <script src="js/ajaxzip3.js"></script>
+	<script>
+$(document).ready(function(){
+    $(".btn-gNav").on("click", function(){
+        $(this).toggleClass("open");
+        $(".gNav").toggleClass("open");
+    });
+});
+</script>
+
 </head>
 
 <body>
- <div class="container">
+	<div class="midashi2">
+		<h3>登録情報編集ページ</h3>
         <form action="edit_profile.php" method="POST">
-        <div class="midashi">
-        <h3>登録情報編集ページ</h3>
-      </div>
             <label for="username">ユーザー名</label>
             <input type="text" name="username" value="<?php echo htmlspecialchars($user['username']); ?>" required>
             <label for="name">名前</label>
@@ -115,14 +122,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <?php echo $message; ?>
                 </div>
             <?php endif; ?>
+			    </div>
         </form>
         <div class="buttons-container">
         <a href="index.php" class="button">トップページ</a>
         <a href="logout.php" class="button">ログアウト</a>
     </div>
-    </div>
-
-    
+	
+	<div class="hamburger">
+        <div class="logo"></div>
+        <p class="btn-gNav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </p>
+        <nav class="gNav">
+            <ul class="gNav-menu">
+                <li><a href="index.php" class="button">トップページ</a></li>
+                <li><a href="logout.php" class="button">ログアウト</a></li>
+            </ul>
+        </nav>
+    </div>   
 </body>
 
 </html>

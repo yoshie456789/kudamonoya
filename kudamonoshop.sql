@@ -20,8 +20,8 @@ SET time_zone = "+00:00";
 --
 -- データベース: `kudamonoshop`
 --
-create database kudamonoshop;
-use kudamonoshop;
+create database kudamonoya;
+use kudamonoya;
 -- --------------------------------------------------------
 
 --

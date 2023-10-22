@@ -60,9 +60,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   <div class="container">
     <form action="regist.php" method="POST">
+<!--
       <div class="midashi">
         <h3>登録情報</h3>
       </div>
+-->
+	<div class="midashi2">
+<h3>登録情報</h3>
       <div class="main1">
         <label for="username">ユーザー名</label>
         <input type="text" name="username" placeholder="もも" autofocus required>
@@ -151,9 +155,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <div class="passError error-message"></div>
         </div>
       </div>
-
-    </form>
   </div>
+    </form>
+
 </body>
 
 </html>
