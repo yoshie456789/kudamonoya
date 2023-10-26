@@ -71,11 +71,8 @@ if (isset($_POST['update_product'])) {
 // 商品の削除
 if (isset($_POST['delete_product'])) {
     $delete_id = $_POST['product_id'];
-    $stmt = $db->prepare("DELETE FROM products WHERE id = ?");
+    $stmt = $db->prepare("UPDATE products SET is_deleted = 1 WHERE id = ?");
     $stmt->execute([$delete_id]);
-    if ($stmt->errorCode() != '00000') {
-        die("SQL error: " . implode(", ", $stmt->errorInfo()));
-    }
 }
 
 header("Location: kanri.php");

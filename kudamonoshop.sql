@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: localhost:8889
--- 生成日時: 2023 年 10 月 19 日 12:26
+-- 生成日時: 2023 年 10 月 26 日 07:23
 -- サーバのバージョン： 5.7.39
 -- PHP のバージョン: 7.4.33
 
@@ -33,17 +33,20 @@ CREATE TABLE `products` (
   `product_name` varchar(255) NOT NULL,
   `stock` int(11) NOT NULL,
   `price` decimal(10,2) NOT NULL,
-  `image` varchar(255) DEFAULT NULL
+  `image` varchar(255) DEFAULT NULL,
+  `is_deleted` tinyint(1) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- テーブルのデータのダンプ `products`
 --
 
-INSERT INTO `products` (`id`, `product_name`, `stock`, `price`, `image`) VALUES
-(2, '津軽産りんご', 28, '135.00', 'ringo.jpg'),
-(3, '山形県産ラフランス', 27, '400.00', 'rahurannsu.jpg'),
-(4, '茨城県産なし', 42, '120.00', 'nashi.jpg');
+INSERT INTO `products` (`id`, `product_name`, `stock`, `price`, `image`, `is_deleted`) VALUES
+(2, '津軽産りんご', 43, '135.00', 'ringo.jpg', 0),
+(3, '山形県産ラフランス', 40, '400.00', 'rahurannsu.jpg', 0),
+(4, '茨城県産なし', 41, '120.00', 'nashi.jpg', 0),
+(5, 'ナルト', 47, '90.00', 'ringo.jpg', 1),
+(6, 'ソード', 27, '82.00', 'nashi.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -66,20 +69,17 @@ CREATE TABLE `purchases` (
 --
 
 INSERT INTO `purchases` (`id`, `user_id`, `product_id`, `quantity`, `subtotal`, `subtotal_taxed`, `purchase_date`) VALUES
-(1, 2, 2, 3, '405.00', '437.40', '2023-10-17 13:49:59'),
-(2, 2, 3, 2, '800.00', '864.00', '2023-10-17 13:49:59'),
-(3, 2, 2, 2, '270.00', '291.60', '2023-10-17 13:58:48'),
-(4, 2, 3, 3, '1200.00', '1296.00', '2023-10-17 13:58:48'),
-(5, 2, 4, 5, '600.00', '648.00', '2023-10-17 13:58:48'),
-(6, 2, 2, 3, '405.00', '437.40', '2023-10-18 16:02:57'),
-(7, 2, 3, 2, '800.00', '864.00', '2023-10-18 16:02:57'),
-(8, 2, 4, 5, '600.00', '648.00', '2023-10-18 16:02:57'),
-(9, 2, 2, 2, '270.00', '291.60', '2023-10-18 16:12:26'),
-(10, 2, 3, 3, '1200.00', '1296.00', '2023-10-18 16:12:26'),
-(11, 2, 4, 5, '600.00', '648.00', '2023-10-18 16:12:26'),
-(12, 2, 2, 2, '270.00', '291.60', '2023-10-18 16:41:28'),
-(13, 2, 3, 3, '1200.00', '1296.00', '2023-10-18 16:41:28'),
-(14, 2, 4, 3, '360.00', '388.80', '2023-10-18 16:41:28');
+(15, 3, 2, 3, '405.00', '437.40', '2023-10-22 13:54:02'),
+(16, 3, 3, 2, '800.00', '864.00', '2023-10-22 13:54:02'),
+(17, 3, 4, 2, '240.00', '259.20', '2023-10-22 13:54:02'),
+(18, 4, 2, 5, '675.00', '729.00', '2023-10-22 14:03:16'),
+(19, 4, 3, 2, '800.00', '864.00', '2023-10-22 14:03:16'),
+(20, 4, 4, 3, '360.00', '388.80', '2023-10-22 14:03:16'),
+(21, 7, 2, 2, '270.00', '291.60', '2023-10-22 14:15:40'),
+(22, 7, 3, 3, '1200.00', '1296.00', '2023-10-22 14:15:40'),
+(23, 7, 4, 4, '480.00', '518.40', '2023-10-22 14:15:40'),
+(24, 7, 5, 3, '270.00', '291.60', '2023-10-26 06:24:51'),
+(25, 3, 6, 3, '246.00', '265.68', '2023-10-26 06:38:46');
 
 -- --------------------------------------------------------
 
@@ -108,7 +108,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `name`, `phone`, `zip21`, `zip22`, `pref21`, `addr21`, `strt21`, `email`, `input_pass`, `option_choice`) VALUES
-(2, 'さるまた', '$2y$10$41CDWn/4L7ujoVfs8qOq1.0o0UodyIjSE.zzL8fOPXzvTaElYWa0y', 'さる', '0112314111', '060', '8588', '北海道', '札幌市中央区', '北三条西', 'yoshie456789@gmail.com', NULL, 'チラシ');
+(3, 'シンタニ', '$2y$10$x1wFpWf2sDUWNh4w2HwkHOnAL0ffW5Ez.XipCnZ4LTu85kDSh0Ab.', '神谷完一', '0184615144', '030', '8570', '青森県', '青森市', '長島9-4-3', 'sintani-kaniti@anet.ne.jp', NULL, 'お友達からの紹介'),
+(4, 'キムラ', '$2y$10$535a5dwq9.usCHbHK6MPH.3j34yHl5LILMUCddT/M5vn1BsW9Gs7m', '木村望', '09070238656', '330', '9301', '埼玉県', 'さいたま市浦和区', '高砂ノースコート三根106', 'kmr9108106@anet.ne.jp', NULL, '街で見かけた'),
+(6, 'suga', '$2y$10$GhDo9xIzKmDoLre7xsT9U.Xgn1VwCszyf7yfzhTkLNt2xmRhUM.KW', '菅健生', '09034248656', '160', '0007', '東京都', '新宿区', '荒木町1-15-9', 'takeo.suga@users.gr.jp', NULL, '新聞・雑誌'),
+(7, 'まえたに', '$2y$10$HpJCfJUwJRhJFQNw.B2L4uH0W/DzqaLA.6xXXu4FRoKXs//1dBO0u', '前谷由佳利', '0980730029', '060', '8588', '北海道', '札幌市中央区', '北三条西マルシオ105', 'maetani_117@example.ne.jp', NULL, 'HP');
 
 --
 -- ダンプしたテーブルのインデックス
@@ -133,6 +136,7 @@ ALTER TABLE `purchases`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
+
 --
 -- ダンプしたテーブルの AUTO_INCREMENT
 --
@@ -141,19 +145,19 @@ ALTER TABLE `users`
 -- テーブルの AUTO_INCREMENT `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- テーブルの AUTO_INCREMENT `purchases`
 --
 ALTER TABLE `purchases`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- テーブルの AUTO_INCREMENT `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- ダンプしたテーブルの制約

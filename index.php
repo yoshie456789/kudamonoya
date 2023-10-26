@@ -7,7 +7,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 }
 
 // データを取得するSQLクエリ
-$sql = "SELECT * FROM products";
+$sql = "SELECT * FROM products WHERE is_deleted = 0";
 try {
     $stmt = $pdo->prepare($sql);
     $stmt->execute();

@@ -57,7 +57,7 @@ function readURL(input, imgElement) {
 
 <?php
 // データベースから商品情報を取得するコードを実装
-$query = "SELECT * FROM products";
+$query = "SELECT * FROM products WHERE is_deleted = 0";
 $result = $db->query($query);
 if ($result->num_rows > 0) {
     $counter = 1;
